@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Botão flutuante
     const whatsappBtn = document.createElement("a");
     whatsappBtn.href =
-      "https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
+      "https://wa.me/21989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
     whatsappBtn.className = "whatsapp-float";
     whatsappBtn.target = "_blank";
     whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!icon.closest(".whatsapp-float")) {
         icon.addEventListener("click", (e) => {
           e.preventDefault();
-          const phone = "5522999590791"; // Seu número com DDI e DDD
+          const phone = "21989698002"; // Seu número com DDI e DDD
           const defaultMessage =
             "Olá, gostaria de agendar um horário na Modern Man Barber Shop";
           window.open(
