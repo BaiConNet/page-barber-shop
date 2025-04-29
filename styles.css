@@ -498,7 +498,7 @@ nav ul li a:hover::after {
 
 .contact-info i {
   margin-right: 10px;
-  color: var(--primary-color);
+  color: #ddd;
   width: 20px;
   text-align: center;
 }
@@ -680,7 +680,7 @@ footer {
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: rgba(7, 94, 84);
+    background-color: rgba(37 211 102);
     color: #fff;
     border-radius: 50%;
     text-align: center;
