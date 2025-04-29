@@ -305,6 +305,7 @@ nav ul li a:hover::after {
 }
 
 .product-card img {
+  margin: auto;
   width: 100%;
   height: 250px;
   object-fit: cover;
