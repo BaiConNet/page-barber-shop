@@ -346,58 +346,93 @@ nav ul li a:hover::after {
 }
 
 /* Team Section */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+
+/* Seção Equipe Simplificada */
+.team {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.team-single {
+  max-width: 400px;
+  margin: 40px auto 0;
 }
 
 .team-card {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .team-card img {
   width: 100%;
   height: 350px;
   object-fit: cover;
+  object-position: top;
 }
 
-.team-card h3 {
+.team-info {
+  padding: 25px;
+}
+
+.team-info h3 {
   font-size: 1.5rem;
-  margin: 20px 0 5px;
-  color: var(--secondary-color);
+  margin-bottom: 5px;
+  color: #333;
 }
 
-.team-card p {
-  color: var(--primary-color);
+.team-info p {
+  color: #d4af37;
   font-weight: 600;
   margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 .social-links {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  color: var(--secondary-color);
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+  color: #555;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.social-links .fa-instagram:hover {
+  color: #e1306c;
+}
+
+.social-links .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.social-links .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .team-card img {
+    height: 300px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
 }
 
 /* Booking Section */
@@ -466,22 +501,6 @@ nav ul li a:hover::after {
   color: var(--primary-color);
   width: 20px;
   text-align: center;
-}
-
-.social-media {
-  margin-top: 30px;
-}
-
-.social-media a {
-  display: inline-block;
-  margin-right: 15px;
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-media a:hover {
-  color: var(--primary-color);
 }
 
 .contact-map {
@@ -659,29 +678,63 @@ footer {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(7, 94, 84);
     color: #fff;
-    border-radius: 50px;
+    border-radius: 50%;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    line-height: 0; /* Garante centralização perfeita */
+  }
+
+  .whatsapp-float i {
+    margin: 0; /* Remove qualquer margem do ícone */
+    padding: 0; /* Remove qualquer padding do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
   .whatsapp-float:hover {
     background-color: #128c7e;
-    transform: scale(1.1);
-    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
   }
 
-  /* Ícone do WhatsApp nas redes sociais */
-  .social-media .fa-whatsapp:hover {
-    color: #25d366 !important;
+  /* Efeito de pulsação opcional */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .whatsapp-float.pulse {
+    animation: pulse 2s infinite;
+  }
+
+  /* Versão para mobile */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      bottom: 20px;
+      right: 20px;
+    }
   }
 }
