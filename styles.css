@@ -726,7 +726,6 @@ footer {
   .whatsapp-float.pulse {
     animation: pulse 2s infinite;
   }
-
   /* Versão para mobile */
   @media (max-width: 768px) {
     .whatsapp-float {
