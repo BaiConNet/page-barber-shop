@@ -329,23 +329,6 @@ nav ul li a:hover::after {
   margin-bottom: 15px;
 }
 
-.btn-add {
-  display: block;
-  width: calc(100% - 40px);
-  margin: 0 auto 20px;
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-add:hover {
-  background-color: var(--primary-color);
-}
-
 /* Team Section */
 
 /* Seção Equipe Simplificada */
