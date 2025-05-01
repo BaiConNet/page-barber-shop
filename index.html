@@ -72,7 +72,7 @@
               <i class="fas fa-spa"></i>
             </div>
             <h3>Pacote Completo</h3>
-            <p>Corte + barba + hidratação + massagem relaxante</p>
+            <p>Corte + barba + hidratação</p>
             <span class="price">R$ 50,00</span>
           </div>
           <div class="service-card">
@@ -84,7 +84,7 @@
               />
             </div>
             <h3>Acabamento</h3>
-            <p>Acabamento impecável, manuntenção em dia</p>
+            <p>Deixe a manuntenção em dia</p>
             <span class="price">R$ 20,00</span>
           </div>
           <div class="service-card">
@@ -92,7 +92,7 @@
               <i class="fas fa-child"></i>
             </div>
             <h3>Listra</h3>
-            <p>Listras marcantes. Estilo que chama atenção</p>
+            <p>Listras marcantes</p>
             <span class="price">R$ 10,00</span>
           </div>
           <div class="service-card">
@@ -100,7 +100,7 @@
               <i class="fas fa-child"></i>
             </div>
             <h3>Tinta Preta</h3>
-            <p>Preto intenso. Cabelo renovado</p>
+            <p>Cabelo renovado</p>
             <span class="price">R$ 20,00</span>
           </div>
           <div class="service-card">
@@ -220,14 +220,17 @@
               <option value="corte">Corte de Cabelo</option>
               <option value="barba">Barba</option>
               <option value="completo">Pacote Completo</option>
+              <option value="completo">Acabamento</option>
+              <option value="completo">Listra</option>
+              <option value="completo">Tinta preta</option>
+              <option value="completo">Limpeza de pele</option>
             </select>
           </div>
           <div class="form-group">
             <label for="barber">Barbeiro:</label>
             <select id="barber" name="barber" required>
-              <option value=""></option>
-              <option value="">Barbeiro disponivel</option>
-              <option value="">David Andrade</option>
+              <option value="">Selecione um barbeiro</option>
+              <option value="Barbeiro disponivel">David Andrade</option>
             </select>
           </div>
           <div class="form-group">
@@ -239,6 +242,52 @@
             <input type="time" id="time" name="time" required />
           </div>
           <button type="submit" id="btnAgendar" class="btn">Agendar</button>
+
+          <script>
+            // Captura o clique no botão Agendar
+            document
+              .getElementById("btnAgendar")
+              .addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Obter os valores dos inputs do formulário
+                const nome =
+                  document.getElementById("name").value || "Não informado";
+                const telefone =
+                  document.getElementById("phone").value || "Não informado";
+                const servico =
+                  document.getElementById("service").value || "Não informado";
+                const barbeiro =
+                  document.getElementById("barber").value || "Não informado";
+                const data =
+                  document.getElementById("date").value || "Não informado";
+                const horario =
+                  document.getElementById("time").value || "Não informado";
+
+                const phone = "5522999590791"; // Seu número com DDI e DDD
+
+                // Mensagem formatada com os dados do usuário
+                const mensagem = `✅ NOVO AGENDAMENTO ✅
+          *Cliente:* ${nome}
+          *Telefone:* ${telefone}
+          *Detalhes do Serviço:*
+          *Serviço:* ${servico}
+          *Barbeiro:* ${barbeiro}
+          *Data:* ${data}
+          *Horário:* ${horario}
+
+         *Por favor, confirme este agendamento*`;
+                console.log(mensagem);
+
+                window.open(
+                  `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
+                  "_blank"
+                );
+
+                // Opcional: resetar o formulário após o envio
+                document.getElementById("formAgendamento").reset();
+              });
+          </script>
         </form>
       </div>
     </section>
