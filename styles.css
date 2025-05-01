@@ -263,6 +263,16 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
 }
 
+.service-icon img.service-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background:  #1a1a1a;
+  padding: 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px #c19b2e88;
+}
+
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
