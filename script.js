@@ -162,10 +162,10 @@ document.addEventListener("DOMContentLoaded", function () {
         *Cliente:* ${nome}
         *Telefone:* ${telefone}
         *Detalhes do Serviço:*
-        *Serviço:* ${servico}
-        *Barbeiro:* ${barbeiro}
-        *Data:* ${data}
-        *Horário:* ${horario}
+        🛠 *Serviço:* ${servico}
+        💈 *Barbeiro:* ${barbeiro}
+        📅 *Data:* ${data}
+        ⏰ *Horário:* ${horario}
         *Mensagem automática*`;
 
         window.open(
@@ -178,6 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Chame a função quando o DOM estiver carregado
-  document.addEventListener("DOMContentLoaded", setupWhatsAppIntegration);
+  // Inicializar quando o DOM estiver pronto
+  document.addEventListener("DOMContentLoaded", () => {
+    setupWhatsAppIntegration();
+  });
 });
