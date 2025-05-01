@@ -219,11 +219,11 @@
               <option value="">Selecione um serviço</option>
               <option value="corte">Corte de Cabelo</option>
               <option value="barba">Barba</option>
-              <option value="completo">Pacote Completo</option>
-              <option value="completo">Acabamento</option>
-              <option value="completo">Listra</option>
-              <option value="completo">Tinta preta</option>
-              <option value="completo">Limpeza de pele</option>
+              <option value="Pacote Completo">Pacote Completo</option>
+              <option value="Acabamento">Acabamento</option>
+              <option value="Listra">Listra</option>
+              <option value="Tinta preta">Tinta preta</option>
+              <option value="Limpeza de pele">Limpeza de pele</option>
             </select>
           </div>
           <div class="form-group">
@@ -268,15 +268,19 @@
 
                 // Mensagem formatada com os dados do usuário
                 const mensagem = `✅ NOVO AGENDAMENTO ✅
+
+          Olá ${barbeiro}, gostaria de agendar um horário na Modern Man Barber Shop
+
           *Cliente:* ${nome}
           *Telefone:* ${telefone}
-          *Detalhes do Serviço:*
+
           *Serviço:* ${servico}
           *Barbeiro:* ${barbeiro}
           *Data:* ${data}
           *Horário:* ${horario}
 
-         *Por favor, confirme este agendamento*`;
+         *Por favor, confirme se este horário está disponível!*`;
+
                 console.log(mensagem);
 
                 window.open(
