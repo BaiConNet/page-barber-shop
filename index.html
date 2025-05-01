@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MODERN MAN - Barber Shop</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="carrossel.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -145,7 +146,7 @@
           </div>
           <div class="product-card">
             <img src="img/balm.jpeg" alt="Balm" />
-            <h3>Balm</h3>
+            <h3>Balm Dulux</h3>
             <p>Alinha e Controla a Barba 120g</p>
             <span class="price">R$ 30,00</span>
           </div>
@@ -158,6 +159,29 @@
         </div>
       </div>
     </section>
+
+    <section class="product-carousel-section">
+      <h2 class="section-title">Nossos Produtos em Destaque</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-button prev" aria-label="Anterior">
+          &#10094;
+        </button>
+
+        <div class="carousel-track">
+          <!-- Produtos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <button class="carousel-button next" aria-label="Próximo">
+          &#10095;
+        </button>
+      </div>
+
+      <div class="carousel-nav">
+        <!-- Indicadores de slide serão inseridos aqui via JavaScript -->
+      </div>
+    </section>
+    <script src="carrossel.js"></script>
 
     <section id="equipe" class="team">
       <div class="container">
