@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("time").value || "Não informado";
 
         const phone = "5522999590791"; // Seu número com DDI e DDD
+
         // Mensagem formatada com os dados do usuário
         const mensagem = `✅ NOVO AGENDAMENTO ✅
 
