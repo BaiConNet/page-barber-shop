@@ -72,41 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Formulário de Newsletter
-  const newsletterForm = document.getElementById("newsletter-form");
-
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const email = this.querySelector('input[type="email"]').value;
-
-      console.log("Email cadastrado:", email);
-
-      // Feedback para o usuário
-      alert("Obrigado por assinar nossa newsletter!");
-      this.reset();
-    });
-  }
-
-  // Botões de compra de produtos
-  const buyButtons = document.querySelectorAll(".btn-add");
-
-  buyButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const productCard = this.closest(".product-card");
-      const productName = productCard.querySelector("h3").textContent;
-      const productPrice = productCard.querySelector(".price").textContent;
-
-      console.log(
-        `Produto adicionado ao carrinho: ${productName} - ${productPrice}`
-      );
-
-      // Feedback para o usuário
-      alert(`${productName} adicionado ao carrinho!`);
-    });
-  });
-
   // Validação de data no formulário de agendamento
   const dateInput = document.getElementById("date");
 
@@ -143,12 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", animateOnScroll);
   animateOnScroll(); // Executa uma vez ao carregar a página
+
   // Integração com WhatsApp
   function setupWhatsAppIntegration() {
     // Botão flutuante
     const whatsappBtn = document.createElement("a");
     whatsappBtn.href =
-      "https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
+      "https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
     whatsappBtn.className = "whatsapp-float";
     whatsappBtn.target = "_blank";
     whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
@@ -159,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!icon.closest(".whatsapp-float")) {
         icon.addEventListener("click", (e) => {
           e.preventDefault();
-          const phone = "5521989698002"; // Seu número com DDI e DDD
+          const phone = "5522999590791"; // Seu número com DDI e DDD
           const defaultMessage =
             "Olá, gostaria de agendar um horário na Modern Man Barber Shop";
           window.open(
@@ -169,8 +135,50 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     });
+
+    // Captura o clique no botão Agendar
+    document
+      .getElementById("btnAgendar")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Obter os valores dos inputs do formulário
+        const nome = document.getElementById("name").value || "Não informado";
+        const telefone =
+          document.getElementById("phone").value || "Não informado";
+        const servico =
+          document.getElementById("service").value || "Não informado";
+        const barbeiro =
+          document.getElementById("barber").value || "Não informado";
+        const data = document.getElementById("date").value || "Não informado";
+        const horario =
+          document.getElementById("time").value || "Não informado";
+
+        const phone = "5522999590791"; // Seu número com DDI e DDD
+        // Mensagem formatada com os dados do usuário
+        const mensagem = `✅ NOVO AGENDAMENTO ✅
+
+        *Cliente:* ${nome}
+        *Telefone:* ${telefone}
+        *Detalhes do Serviço:*
+        🛠 *Serviço:* ${servico}
+        💈 *Barbeiro:* ${barbeiro}
+        📅 *Data:* ${data}
+        ⏰ *Horário:* ${horario}
+        *Mensagem automática*`;
+
+        window.open(
+          `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
+          "_blank"
+        );
+
+        // Opcional: resetar o formulário após o envio
+        document.getElementById("formAgendamento").reset();
+      });
   }
 
-  // Chame a função quando o DOM estiver carregado
-  document.addEventListener("DOMContentLoaded", setupWhatsAppIntegration);
+  // Inicializar quando o DOM estiver pronto
+  document.addEventListener("DOMContentLoaded", () => {
+    setupWhatsAppIntegration();
+  });
 });
