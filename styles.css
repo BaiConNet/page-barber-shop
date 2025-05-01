@@ -208,8 +208,7 @@ nav ul li a:hover::after {
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
-      no-repeat center center/cover;
+    url("img/barber-backgroud.jpeg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   text-align: center;
@@ -267,7 +266,7 @@ nav ul li a:hover::after {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  background:  #1a1a1a;
+  background: #1a1a1a;
   padding: 2px;
   border-radius: 50%;
   box-shadow: 0 0 6px 2px #c19b2e88;
