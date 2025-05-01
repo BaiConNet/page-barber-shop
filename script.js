@@ -109,74 +109,73 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", animateOnScroll);
   animateOnScroll(); // Executa uma vez ao carregar a página
 
-  // Integração com WhatsApp
-  function setupWhatsAppIntegration() {
-    // Botão flutuante
-    const whatsappBtn = document.createElement("a");
-    whatsappBtn.href =
-      "https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
-    whatsappBtn.className = "whatsapp-float";
-    whatsappBtn.target = "_blank";
-    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    document.body.appendChild(whatsappBtn);
+  // // Integração com WhatsApp
+  // function setupWhatsAppIntegration() {
+  //   // Botão flutuante
+  //   const whatsappBtn = document.createElement("a");
+  //   whatsappBtn.href =
+  //     "https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop";
+  //   whatsappBtn.className = "whatsapp-float";
+  //   whatsappBtn.target = "_blank";
+  //   whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+  //   document.body.appendChild(whatsappBtn);
 
-    // Todos os ícones do WhatsApp na página
-    document.querySelectorAll(".fa-whatsapp").forEach((icon) => {
-      if (!icon.closest(".whatsapp-float")) {
-        icon.addEventListener("click", (e) => {
-          e.preventDefault();
-          const phone = "5522999590791"; // Seu número com DDI e DDD
-          const defaultMessage =
-            "Olá, gostaria de agendar um horário na Modern Man Barber Shop";
-          window.open(
-            `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`,
-            "_blank"
-          );
-        });
-      }
-    });
+  //   // Todos os ícones do WhatsApp na página
+  //   document.querySelectorAll(".fa-whatsapp").forEach((icon) => {
+  //     if (!icon.closest(".whatsapp-float")) {
+  //       icon.addEventListener("click", (e) => {
+  //         e.preventDefault();
+  //         const phone = "5522999590791"; // Seu número com DDI e DDD
+  //         const defaultMessage =
+  //           "Olá, gostaria de agendar um horário na Modern Man Barber Shop";
+  //         window.open(
+  //           `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`,
+  //           "_blank"
+  //         );
+  //       });
+  //     }
+  //     // Captura o clique no botão Agendar
+  //     document
+  //       .getElementById("btnAgendar")
+  //       .addEventListener("click", function (e) {
+  //         e.preventDefault();
 
-    // Captura o clique no botão Agendar
-    document
-      .getElementById("btnAgendar")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
+  //         // Obter os valores dos inputs do formulário
+  //         const nome = document.getElementById("name").value || "Não informado";
+  //         const telefone =
+  //           document.getElementById("phone").value || "Não informado";
+  //         const servico =
+  //           document.getElementById("service").value || "Não informado";
+  //         const barbeiro =
+  //           document.getElementById("barber").value || "Não informado";
+  //         const data = document.getElementById("date").value || "Não informado";
+  //         const horario =
+  //           document.getElementById("time").value || "Não informado";
 
-        // Obter os valores dos inputs do formulário
-        const nome = document.getElementById("name").value || "Não informado";
-        const telefone =
-          document.getElementById("phone").value || "Não informado";
-        const servico =
-          document.getElementById("service").value || "Não informado";
-        const barbeiro =
-          document.getElementById("barber").value || "Não informado";
-        const data = document.getElementById("date").value || "Não informado";
-        const horario =
-          document.getElementById("time").value || "Não informado";
+  //         const phone = "5522999590791"; // Seu número com DDI e DDD
 
-        const phone = "5522999590791"; // Seu número com DDI e DDD
+  //         // Mensagem formatada com os dados do usuário
+  //         const mensagem = `✅ NOVO AGENDAMENTO ✅
+  //         *Cliente:* ${nome}
+  //         *Telefone:* ${telefone}
+  //         *Detalhes do Serviço:*
+  //         🛠 *Serviço:* ${servico}
+  //         💈 *Barbeiro:* ${barbeiro}
+  //         📅 *Data:* ${data}
+  //         ⏰ *Horário:* ${horario}
+  //         *Mensagem automática*`;
+  //         console.log(mensagem);
 
-        // Mensagem formatada com os dados do usuário
-        const mensagem = `✅ NOVO AGENDAMENTO ✅
+  //         window.open(
+  //           `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
+  //           "_blank"
+  //         );
 
-        *Cliente:* ${nome}
-        *Telefone:* ${telefone}
-        *Detalhes do Serviço:*
-        🛠 *Serviço:* ${servico}
-        💈 *Barbeiro:* ${barbeiro}
-        📅 *Data:* ${data}
-        ⏰ *Horário:* ${horario}
-        *Mensagem automática*`;
-
-        window.open(
-          `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
-          "_blank"
-        );
-
-        // Opcional: resetar o formulário após o envio
-        document.getElementById("formAgendamento").reset();
-      });
-  }
+  //         // Opcional: resetar o formulário após o envio
+  //         document.getElementById("formAgendamento").reset();
+  //       });
+  //   });
+  // }
 
   // Inicializar quando o DOM estiver pronto
   document.addEventListener("DOMContentLoaded", () => {
