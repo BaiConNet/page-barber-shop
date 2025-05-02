@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const indicators = document.querySelectorAll(".carousel-indicator");
   const productCards = document.querySelectorAll(".product-card");
-  const totalSlides = Math.ceil(products.length / cardsPerView);
+  const totalSlides = Math.ceil(products.length);
 
   // Inicializar carrossel
   updateCarousel();
