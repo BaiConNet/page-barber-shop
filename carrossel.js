@@ -82,7 +82,6 @@ function createProductCards() {
     nav.appendChild(indicator);
   });
 }
-
 // Inicializar o carrossel
 createProductCards();
 const indicators = document.querySelectorAll(".carousel-indicator");
