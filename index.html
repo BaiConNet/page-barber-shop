@@ -167,27 +167,32 @@
       </div>
     </section>
 
-    <section class="product-carousel-section">
-      <h2 class="section-title">Nossos Produtos</h2>
-
+    <section class="product-carousel">
+      <h2>Nossos Produtos</h2>
+      
       <div class="carousel-container">
-        <button class="carousel-button prev" aria-label="Anterior">
-          &#10094;
-        </button>
-
-        <div class="carousel-track">
-          <!-- Produtos serão inseridos aqui via JavaScript -->
+        <div class="carousel-grid">
+          <!-- Produtos serão inseridos via JS -->
+        </div>
+        
+        <div class="carousel-container">
+          <div class="carousel-grid"><!-- Produtos --></div>
+        </div>
+        
+        <!-- Botões agora ficam abaixo -->
+        <div class="carousel-buttons">
+          <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel-button next" aria-label="Próximo">&#10095;</button>
+        </div>
+        
+        <div class="carousel-indicators">
+          <!-- Os dots serão gerados via JavaScript -->
         </div>
 
-        <button class="carousel-button next" aria-label="Próximo">
-          &#10095;
-        </button>
-      </div>
-
-      <div class="carousel-nav">
-        <script src="carrossel.js"></script>
       </div>
     </section>
+  
+    <script src="carrossel.js"></script>
 
     <section id="equipe" class="team">
       <div class="container">
