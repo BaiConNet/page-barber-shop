@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardStyle = getComputedStyle(productCards[0]);
   const cardWidth = productCards[0].offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
   const gap = parseInt(getComputedStyle(carouselGrid).gap) || 20;
-  const scrollAmount = cardWidth * cardsPerView + gap * (cardsPerView - 1);
+  let scrollAmount = cardWidth * cardsPerView + gap * (cardsPerView - 1);
   const totalSlides = Math.ceil(productCards.length / cardsPerView);
 
   // 6. Criar dots indicadores
