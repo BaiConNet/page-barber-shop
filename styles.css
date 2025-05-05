@@ -284,7 +284,6 @@ nav ul li a:hover::after {
   gap: 16px;
 }
 
-
 .service-icon {
   display: flex;
   align-items: center;
@@ -292,7 +291,6 @@ nav ul li a:hover::after {
   gap: 10px; /* espaço entre as imagens e o + */
   margin-bottom: 20px;
 }
-
 
 .service-icon img.service-img {
   width: 80px;
@@ -636,6 +634,34 @@ footer {
   border-top: 1px solid #444;
   color: #aaa;
   font-size: 0.9rem;
+}
+
+form[method="dialog"] {
+  /* Remove qualquer estilo padrão que possa interferir */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message:not(:empty) {
+  display: block;
+}
+
+input:invalid:not(:empty),
+select.option:invalid:not(:empty) {
+  border-color: #ff4444;
+}
+
+input:valid:not(:empty),
+select:valid:not(:empty) {
+  border-color: #00c851;
 }
 
 /* Responsividade */

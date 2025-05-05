@@ -200,9 +200,9 @@
           <span class="error-message" id="name-error"></span>
         </div>
         <div class="form-group">
-          <label for="phone">Telefone:</label>
-          <input type="tel" id="phone" name="phone" required pattern="(\(\d{2}\)|\d{2})[\s-]?\d{4,5}[\s-]?\d{4}"
-            title="Formato: (21) 99999-9999 ou 21 99999-9999">
+          <label for="phone">Telefone: </label>
+          <input type="tel" id="phone" name="phone" required 
+                 title="Formato: (21) 99999-9999 ou 21 99999-9999">
           <span class="error-message" id="phone-error"></span>
         </div>
         <div class="form-group">
@@ -227,11 +227,15 @@
           </select>
           <span class="error-message" id="barber-error"></span>
         </div>
+        
         <div class="form-group">
           <label for="date">Data:</label>
-          <input type="date" id="date" name="date" required min="<?php echo date('Y-m-d'); ?>">
+          <input type="date" id="date" name="date" required 
+                 min="<?php echo date('Y-m-d'); ?>"
+                 max="<?php echo date('Y-m-d', strtotime('+1 week')); ?>">
           <span class="error-message" id="date-error"></span>
         </div>
+
         <div class="form-group">
           <label for="time">Horário:</label>
           <input type="time" id="time" name="time" required min="10:00" max="17:30">

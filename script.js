@@ -100,10 +100,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
+        // Verifica se a data é anterior à data atual
         if (selectedDate < today) {
           document.getElementById("date-error").textContent =
             "Não é possível agendar para datas passadas";
           isValid = false;
+        }
+        // Verifica se a data é mais de 1 semana no futuro
+        else {
+          const oneWeekFromNow = new Date();
+          oneWeekFromNow.setDate(today.getDate() + 7); // Adiciona 7 dias
+
+          if (selectedDate > oneWeekFromNow) {
+            document.getElementById("date-error").textContent =
+              "Não é possível agendar com mais de 1 semana de antecedência";
+            isValid = false;
+          }
         }
       }
 
@@ -114,7 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
       } else {
         const [hours, minutes] = horario.split(":").map(Number);
-        if (hours < 10 || (hours === 17 && minutes > 30) || hours >= 18) {
+
+        // Verifica se o horário termina em 00 ou 30
+        if (minutes !== 0 && minutes !== 30) {
+          document.getElementById("time-error").textContent =
+            "Por favor, selecione um horário que termine em :00 ou :30";
+          isValid = false;
+        }
+        // Verifica o horário de funcionamento
+        else if (hours < 10 || (hours === 17 && minutes > 30) || hours >= 18) {
           document.getElementById("time-error").textContent =
             "Horário fora do funcionamento (10:00 - 17:30)";
           isValid = false;
