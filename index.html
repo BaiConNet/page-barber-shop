@@ -43,7 +43,7 @@
     <section id="home" class="hero">
       <div class="hero-content">
         <h2>Mais que um Corte, Uma Transformação</h2>
-        <p>Estilo que impressiona, atitude que transforma</p>
+
         <a href="#agendamento" class="btn">Agende Seu Horário</a>
       </div>
     </section>
@@ -64,7 +64,7 @@
             <p>Estilo personalizado com as últimas tendências.</p>
             <div class="card-footer">
               <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -79,7 +79,7 @@
             <p>Corte modelado para realçar seu estilo e presença.</p>
             <div class="card-footer">
               <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -96,11 +96,11 @@
                 class="service-img"
               />
             </div>
-            <h3>Pacote Completo</h3>
-            <p>Corte + barba + hidratação</p>
+            <h3>Corte + barba</h3>
+            <p>Corte + barba</p>
             <div class="card-footer">
-              <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <span class="price">R$ 50,00</span>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -114,8 +114,8 @@
             <h3>Acabamento</h3>
             <p>Acabamento perfeito para um visual renovado</p>
             <div class="card-footer">
-              <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -129,8 +129,8 @@
             <h3>Listra</h3>
             <p>Listras marcantes</p>
             <div class="card-footer">
-              <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <span class="price">R$ 10,00</span>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -141,11 +141,11 @@
                 class="service-img"
               />
             </div>
-            <h3>Coloração</h3>
+            <h3>Pigmentação</h3>
             <p>Cabelo renovado</p>
             <div class="card-footer">
-              <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
           <div class="service-card">
@@ -159,8 +159,8 @@
             <h3>Limpeza de pele</h3>
             <p>Relaxe e renove com nossos tratamentos revitalizantes.</p>
             <div class="card-footer">
-              <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">Reservar</a>
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small">AGENDAR</a>
             </div>
           </div>
         </div>
@@ -169,29 +169,32 @@
 
     <section class="product-carousel">
       <h2>Nossos Produtos</h2>
-      
+
       <div class="carousel-container">
         <div class="carousel-grid">
           <!-- Produtos serão inseridos via JS -->
         </div>
-        
+
         <div class="carousel-container">
           <div class="carousel-grid"><!-- Produtos --></div>
         </div>
-        
+
         <!-- Botões agora ficam abaixo -->
         <div class="carousel-buttons">
-          <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
-          <button class="carousel-button next" aria-label="Próximo">&#10095;</button>
+          <button class="carousel-button prev" aria-label="Anterior">
+            &#10094;
+          </button>
+          <button class="carousel-button next" aria-label="Próximo">
+            &#10095;
+          </button>
         </div>
-        
+
         <div class="carousel-indicators">
           <!-- Os dots serão gerados via JavaScript -->
         </div>
-
       </div>
     </section>
-  
+
     <script src="carrossel.js"></script>
 
     <section id="equipe" class="team">
@@ -223,7 +226,7 @@
                   <i class="fab fa-facebook"></i>
                 </a>
                 <a
-                  href="https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+                  href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -254,10 +257,10 @@
               <option value="">Selecione um serviço</option>
               <option value="Corte de Cabelo">Corte de Cabelo</option>
               <option value="Barba">Barba</option>
-              <option value="Pacote Completo">Pacote Completo</option>
+              <option value="Cabelo + Barba">Cabelo + Barba</option>
               <option value="Acabamento">Acabamento</option>
               <option value="Listra">Listra</option>
-              <option value="Coloraçãoa">Coloração</option>
+              <option value="Pigmentaçãoa">Pigmentação</option>
               <option value="Limpeza de pele">Limpeza de pele</option>
             </select>
           </div>
@@ -299,7 +302,7 @@
                 const horario =
                   document.getElementById("time").value || "Não informado";
 
-                const phone = "5522999590791"; // Seu número com DDI e DDD
+                const phone = "5521989698002"; // Seu número com DDI e DDD
 
                 // Mensagem formatada com os dados do usuário
                 const mensagem = `✅ NOVO AGENDAMENTO ✅
@@ -344,7 +347,7 @@
             <p><i class="fas fa-phone"></i> (21) 98969-8002</p>
             <p><i class="fas fa-envelope"></i> contato@modernman.com</p>
             <h3>Horário de Funcionamento</h3>
-            <p>Segunda a Sexta: 10:00 - 17:00</p>
+            <p>Segunda a Sexta: 10:00 - 17:30</p>
             <p>Sábado: 10:00 - 15:00</p>
             <p>Domingo: Fechado</p>
             <div class="social-links">
@@ -356,7 +359,7 @@
                 ><i class="fab fa-instagram"></i
               ></a>
               <a
-                href="https://wa.me/5522999590791?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+                href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
                 class="whatsapp-float"
                 target="_blank"
                 ><i class="fab fa-whatsapp"></i

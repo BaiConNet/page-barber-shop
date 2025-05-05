@@ -4,37 +4,37 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: 1,
       title: "Pomada Modeladora Infinity 80g",
-      price: "R$ 21,99",
+      price: "R$ 20,00",
       image: "img/pomada-infinity.png",
     },
     {
       id: 6,
       title: "Pasta Modeladora For Men 160g",
-      price: "R$ 29,99",
+      price: "R$ 30,00",
       image: "img/pomada-malb.png",
     },
     {
       id: 2,
       title: "Shampoo Dom Pelo 250ml",
-      price: "R$ 29,99",
+      price: "R$ 30,00",
       image: "img/shampoo-dom-pelo.jpeg",
     },
     {
       id: 3,
       title: "Gel Cola extra forte 300g",
-      price: "R$ 21,99",
+      price: "R$ 22,00",
       image: "img/gel-cola.jpeg",
     },
     {
       id: 4,
       title: "Minoxidil Dom Pelo 120ml",
-      price: "R$ 39,99",
+      price: "R$ 40,00",
       image: "img/minoxidil.jpeg",
     },
     {
       id: 5,
       title: "Balm Dulux 120g",
-      price: "R$ 29,99",
+      price: "R$ 30,00",
       image: "img/balm.jpeg",
     },
   ];
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 4. Inserir produtos no grid
-  products.forEach(product => {
+  products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.className = "product-card";
     productCard.innerHTML = `
@@ -70,7 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let cardsPerView = calculateCardsPerView();
   const productCards = document.querySelectorAll(".product-card");
   const cardStyle = getComputedStyle(productCards[0]);
-  const cardWidth = productCards[0].offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
+  const cardWidth =
+    productCards[0].offsetWidth +
+    parseInt(cardStyle.marginLeft) +
+    parseInt(cardStyle.marginRight);
   const gap = parseInt(getComputedStyle(carouselGrid).gap) || 20;
   let scrollAmount = cardWidth * cardsPerView + gap * (cardsPerView - 1);
   const totalSlides = Math.ceil(productCards.length / cardsPerView);
@@ -81,12 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.classList.add("carousel-indicator");
     dot.dataset.index = i;
     indicatorsContainer.appendChild(dot);
-    
+
     dot.addEventListener("click", () => {
-      const scrollPosition = i * (cardWidth * cardsPerView + gap * (cardsPerView - 1));
+      const scrollPosition =
+        i * (cardWidth * cardsPerView + gap * (cardsPerView - 1));
       carouselGrid.scrollTo({
         left: scrollPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     });
   }
@@ -94,9 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 7. Atualizar dots ativos
   function updateActiveDot() {
     const scrollPosition = carouselGrid.scrollLeft;
-    const activeIndex = Math.round(scrollPosition / (cardWidth * cardsPerView + gap * (cardsPerView - 1)));
-    
-    document.querySelectorAll(".carousel-indicator").forEach(dot => {
+    const activeIndex = Math.round(
+      scrollPosition / (cardWidth * cardsPerView + gap * (cardsPerView - 1))
+    );
+
+    document.querySelectorAll(".carousel-indicator").forEach((dot) => {
       const dotIndex = parseInt(dot.dataset.index);
       dot.classList.toggle("active", dotIndex === activeIndex);
       dot.setAttribute("aria-current", dotIndex === activeIndex);
@@ -104,21 +110,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Atualizar visibilidade dos botões
     prevButton.style.visibility = scrollPosition <= 10 ? "hidden" : "visible";
-    nextButton.style.visibility = scrollPosition >= carouselGrid.scrollWidth - carouselGrid.offsetWidth - 10 ? "hidden" : "visible";
+    nextButton.style.visibility =
+      scrollPosition >= carouselGrid.scrollWidth - carouselGrid.offsetWidth - 10
+        ? "hidden"
+        : "visible";
   }
 
   // 8. Navegação por botões - VERSÃO 100% FUNCIONAL
   nextButton.addEventListener("click", () => {
     carouselGrid.scrollBy({
       left: scrollAmount,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 
   prevButton.addEventListener("click", () => {
     carouselGrid.scrollBy({
       left: -scrollAmount,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 
@@ -130,9 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     const prevCardsPerView = cardsPerView;
     cardsPerView = calculateCardsPerView();
-    
+
     if (prevCardsPerView !== cardsPerView) {
-      const newScrollAmount = cardWidth * cardsPerView + gap * (cardsPerView - 1);
+      const newScrollAmount =
+        cardWidth * cardsPerView + gap * (cardsPerView - 1);
       scrollAmount = newScrollAmount;
       updateActiveDot();
     }
