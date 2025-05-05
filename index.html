@@ -1,134 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MODERN MAN - Barber Shop</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="carrossel.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="logo-container">
-        <img src="img/logo.png" alt="Modern Man Barber Shop Logo" class="logo-img" />
-        <div class="logo">
-          <h1>MODERN MAN <span>Barber Shop</span></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MODERN MAN - Barber Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="carrossel.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      header {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-container">
+          <img
+            src="img/logo.png"
+            alt="Modern Man Barber Shop Logo"
+            class="logo-img"
+          />
+          <div class="logo">
+            <h1>MODERN MAN <span>Barber Shop</span></h1>
+          </div>
         </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#agendamento">Agendamento</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+          <div class="menu-mobile">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#equipe">Equipe</a></li>
-          <li><a href="#agendamento">Agendamento</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="menu-mobile">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h2>Mais que um Corte, Uma Transformação</h2>
-
-      <a href="#agendamento" class="btn">Agende Seu Horário</a>
-    </div>
-  </section>
-
-  <section id="servicos" class="services">
-    <div class="container">
-      <h2 class="section-title">Nossos Serviços</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-corte-cabelo.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Corte de Cabelo</h3>
-          <p>Estilo personalizado com as últimas tendências.</p>
-          <div class="card-footer">
-            <span class="price">R$ 30,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-barba.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Barba</h3>
-          <p>Corte modelado para realçar seu estilo e presença.</p>
-          <div class="card-footer">
-            <span class="price">R$ 30,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-corte-cabelo.jpg" alt="Ícone de acabamento" class="service-img" />
-            <span class="plus-sign">+</span>
-            <img src="./img/s-barba.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Corte + barba</h3>
-          <p>Corte + barba</p>
-          <div class="card-footer">
-            <span class="price">R$ 50,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-acabamento.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Acabamento</h3>
-          <p>Acabamento perfeito para um visual renovado</p>
-          <div class="card-footer">
-            <span class="price">R$ 20,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-listra.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Listra</h3>
-          <p>Listras marcantes</p>
-          <div class="card-footer">
-            <span class="price">R$ 10,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-colorir.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Pigmentação</h3>
-          <p>Cabelo renovado</p>
-          <div class="card-footer">
-            <span class="price">R$ 20,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="./img/s-limpeza-pele.jpg" alt="Ícone de acabamento" class="service-img" />
-          </div>
-          <h3>Limpeza de pele</h3>
-          <p>Relaxe e renove com nossos tratamentos revitalizantes.</p>
-          <div class="card-footer">
-            <span class="price">R$ 20,00</span>
-            <a href="#agendamento" class="btn-small">AGENDAR</a>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Estilo que Começa no Corte.</h2>
+        <div class="cta-container">
+          <a href="#agendamento" class="cta-button main-cta pulse-animation">
+            AGENDAR HORÁRIO
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="cta-subtext">
+            <i class="fas fa-check-circle"></i>
+            Confirmação imediata via WhatsApp
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="servicos" class="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-corte-cabelo.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Corte de Cabelo</h3>
+            <p>Estilo personalizado com as últimas tendências</p>
+            <div class="card-footer">
+              <span class="price">R$ 30,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-barba.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Barba</h3>
+            <p>Corte modelado para realçar seu estilo e presença</p>
+            <div class="card-footer">
+              <span class="price">R$ 30,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-corte-cabelo.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+              <span class="plus-sign">+</span>
+              <img
+                src="./img/s-barba.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Corte + barba</h3>
+            <p>Do clássico ao estilo único</p>
+            <div class="card-footer">
+              <span class="price">R$ 50,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-acabamento.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Acabamento</h3>
+            <p>Acabamento perfeito para um visual renovado</p>
+            <div class="card-footer">
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-listra.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Listra</h3>
+            <p>Listras marcantes</p>
+            <div class="card-footer">
+              <span class="price">R$ 10,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-colorir.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Pigmentação</h3>
+            <p>Cobertura perfeita</p>
+            <div class="card-footer">
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="./img/s-limpeza-pele.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Limpeza de pele</h3>
+            <p>Relaxe e renove com nossos tratamentos revitalizantes</p>
+            <div class="card-footer">
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <section id="produtos" class="product-carousel">
     <h2>Nossos Produtos</h2>
@@ -241,7 +312,9 @@
           <input type="time" id="time" name="time" required min="10:00" max="17:30">
           <span class="error-message" id="time-error"></span>
         </div>
-        <button type="submit" id="btnAgendar" class="btn">Agendar</button>
+        <button type="submit" id="btnAgendar" class="btn pulse-animation">
+            Agendar
+          </button>
       </form>
     </div>
     </form>
