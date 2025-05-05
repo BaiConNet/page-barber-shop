@@ -6,10 +6,22 @@
     <title>MODERN MAN - Barber Shop</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="carrossel.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <style>
+      header {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -42,9 +54,17 @@
 
     <section id="home" class="hero">
       <div class="hero-content">
-        <h2>Mais que um Corte, Uma Transformação</h2>
-
-        <a href="#agendamento" class="btn">Agende Seu Horário</a>
+        <h2>Estilo que Começa no Corte.</h2>
+        <div class="cta-container">
+          <a href="#agendamento" class="cta-button main-cta pulse-animation">
+            AGENDAR HORÁRIO
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="cta-subtext">
+            <i class="fas fa-check-circle"></i>
+            Confirmação imediata via WhatsApp
+          </div>
+        </div>
       </div>
     </section>
 
@@ -61,10 +81,12 @@
               />
             </div>
             <h3>Corte de Cabelo</h3>
-            <p>Estilo personalizado com as últimas tendências.</p>
+            <p>Estilo personalizado com as últimas tendências</p>
             <div class="card-footer">
               <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -76,10 +98,12 @@
               />
             </div>
             <h3>Barba</h3>
-            <p>Corte modelado para realçar seu estilo e presença.</p>
+            <p>Corte modelado para realçar seu estilo e presença</p>
             <div class="card-footer">
               <span class="price">R$ 30,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -97,10 +121,12 @@
               />
             </div>
             <h3>Corte + barba</h3>
-            <p>Corte + barba</p>
+            <p>Do clássico ao estilo único</p>
             <div class="card-footer">
               <span class="price">R$ 50,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -115,7 +141,9 @@
             <p>Acabamento perfeito para um visual renovado</p>
             <div class="card-footer">
               <span class="price">R$ 20,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -130,7 +158,9 @@
             <p>Listras marcantes</p>
             <div class="card-footer">
               <span class="price">R$ 10,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -142,10 +172,12 @@
               />
             </div>
             <h3>Pigmentação</h3>
-            <p>Cabelo renovado</p>
+            <p>Cobertura perfeita</p>
             <div class="card-footer">
               <span class="price">R$ 20,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
           <div class="service-card">
@@ -157,10 +189,12 @@
               />
             </div>
             <h3>Limpeza de pele</h3>
-            <p>Relaxe e renove com nossos tratamentos revitalizantes.</p>
+            <p>Relaxe e renove com nossos tratamentos revitalizantes</p>
             <div class="card-footer">
               <span class="price">R$ 20,00</span>
-              <a href="#agendamento" class="btn-small">AGENDAR</a>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
             </div>
           </div>
         </div>
@@ -279,7 +313,9 @@
             <label for="time">Horário:</label>
             <input type="time" id="time" name="time" required />
           </div>
-          <button type="submit" id="btnAgendar" class="btn">Agendar</button>
+          <button type="submit" id="btnAgendar" class="btn pulse-animation">
+            Agendar
+          </button>
 
           <script>
             // Captura o clique no botão Agendar
