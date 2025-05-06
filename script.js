@@ -97,25 +97,37 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
       } else {
         const selectedDate = new Date(data);
+        selectedDate.setHours(0, 0, 0, 0); // Normaliza a hora para meia-noite
         const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0); // Normaliza a hora para meia-noite
 
         // Verifica se a data é anterior à data atual
         if (selectedDate < today) {
-          document.getElementById("date-error").textContent =
-            "Não é possível agendar para datas passadas";
-          isValid = false;
+          const oneDateNow = new Date(today);
+          oneDateNow.setDate(today.getDate() - 1); // diminui 1 dias
+          oneDateNow.setHours(0, 0, 0, 0); // Normaliza a hora
+
+          if (selectedDate < oneDateNow) {
+            document.getElementById("date-error").textContent =
+              "Não é possível agendar para datas passadas";
+            isValid = false;
+          }
         }
         // Verifica se a data é mais de 1 semana no futuro
-        else {
-          const oneWeekFromNow = new Date();
+        else if (selectedDate > today) {
+          const oneWeekFromNow = new Date(today);
           oneWeekFromNow.setDate(today.getDate() + 7); // Adiciona 7 dias
+          oneWeekFromNow.setHours(0, 0, 0, 0); // Normaliza a hora
 
           if (selectedDate > oneWeekFromNow) {
             document.getElementById("date-error").textContent =
               "Não é possível agendar com mais de 1 semana de antecedência";
             isValid = false;
+          } else {
+            document.getElementById("date-error").textContent = ""; // Data válida - limpa mensagem de erro
           }
+        } else {
+          document.getElementById("date-error").textContent = ""; // Data é hoje - limpa mensagem de erro
         }
       }
 
