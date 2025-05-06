@@ -119,21 +119,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // Validação do horário
+      // Validação do horário e dia da semana
       if (horario === "") {
         document.getElementById("time-error").textContent =
           "Por favor, selecione um horário";
         isValid = false;
       } else {
         const [hours, minutes] = horario.split(":").map(Number);
+        const selectedDate = new Date(data);
+        const dayOfWeek = selectedDate.getDay(); // 0=Domingo, 6=Sábado
 
+        // Verifica se é domingo
+        if (dayOfWeek === 6) {
+          document.getElementById("time-error").textContent =
+            "Não abrimos aos domingos";
+          isValid = false;
+        }
+        // Verifica se é sábado após 15h
+        else if (
+          dayOfWeek === 5 &&
+          (hours > 15 || (hours === 15 && minutes > 0))
+        ) {
+          document.getElementById("time-error").textContent =
+            "Aos sábados só atendemos até 15h";
+          isValid = false;
+        }
         // Verifica se o horário termina em 00 ou 30
-        if (minutes !== 0 && minutes !== 30) {
+        else if (minutes !== 0 && minutes !== 30) {
           document.getElementById("time-error").textContent =
             "Por favor, selecione um horário que termine em :00 ou :30";
           isValid = false;
         }
-        // Verifica o horário de funcionamento
+        // Verifica o horário de funcionamento padrão (seg-sex 10h-17h30)
         else if (hours < 10 || (hours === 17 && minutes > 30) || hours >= 18) {
           document.getElementById("time-error").textContent =
             "Horário fora do funcionamento (10:00 - 17:30)";
@@ -153,34 +170,47 @@ document.addEventListener("DOMContentLoaded", function () {
             const telefone = document.getElementById("phone").value;
             const servico = document.getElementById("service").value;
             const barbeiro = document.getElementById("barber").value;
-            const data = document.getElementById("date").value;
+            const dataISO = document.getElementById("date").value;
             const horario = document.getElementById("time").value;
             const phone = "5521989698002"; // Seu número com DDI e DDD
+
+            function formatarData(dataISO) {
+              const [ano, mes, dia] = dataISO.split("-");
+              return `${dia}/${mes}/${ano}`; // Formato DD/MM/AAAA
+            }
+            const dataFormatada = formatarData(dataISO);
+
+            // Esta linha deve vir ANTES de usar a variável
             // Mensagem formatada com os dados do usuário
-            const mensagem = `✅ NOVO AGENDAMENTO ✅
+            const mensagem = `NOVO AGENDAMENTO
+            
+Olá ${barbeiro}, gostaria de agendar um horário na Modern Man Barber Shop.
 
-    Olá ${barbeiro}, gostaria de agendar um horário na Modern Man Barber Shop.
+Data: ${dataFormatada}  
+Horário: ${horario}  
+Serviço: ${servico}  
+Barbeiro: ${barbeiro}
 
-    *Cliente:* ${nome}
-    *Telefone:* ${telefone}
+Cliente: ${nome}  
+Contato: ${telefone}
 
-    *Serviço:* ${servico}
-    *Barbeiro:* ${barbeiro}
-    *Data:* ${data}
-    *Horário:* ${horario}
-
-   *Por favor, confirme se este horário está disponível!*`;
-
-            console.log(mensagem);
+*Por favor, confirme se este horário está disponível!*`;
 
             window.open(
               `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
               "_blank"
             );
-
-            // Opcional: resetar o formulário após o envio
-            bookingForm.reset();
+            console.log(mensagem);
           });
+
+        function resetForm(formElement) {
+          // Resetar os valores
+          formElement.reset();
+        }
+        // Limpar mensagens de erro
+        document.querySelectorAll(".error-message").forEach((el) => {
+          el.textContent = "";
+        });
 
         // Animação ao rolar a página
         const animateOnScroll = function () {
