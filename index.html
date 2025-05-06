@@ -201,248 +201,187 @@
       </div>
     </section>
 
-    <section id="produtos" class="product-carousel">
-      <h2>Nossos Produtos</h2>
+  <section id="produtos" class="product-carousel">
+    <h2>Nossos Produtos</h2>
+
+    <div class="carousel-container">
+      <div class="carousel-grid">
+        <!-- Produtos serão inseridos via JS -->
+      </div>
 
       <div class="carousel-container">
-        <div class="carousel-grid">
-          <!-- Produtos serão inseridos via JS -->
-        </div>
-
-        <div class="carousel-container">
-          <div class="carousel-grid"><!-- Produtos --></div>
-        </div>
-
-        <!-- Botões agora ficam abaixo -->
-        <div class="carousel-buttons">
-          <button class="carousel-button prev" aria-label="Anterior">
-            &#10094;
-          </button>
-          <button class="carousel-button next" aria-label="Próximo">
-            &#10095;
-          </button>
-        </div>
-
-        <div class="carousel-indicators">
-          <!-- Os dots serão gerados via JavaScript -->
-        </div>
+        <div class="carousel-grid"><!-- Produtos --></div>
       </div>
-    </section>
 
-    <script src="carrossel.js"></script>
+      <!-- Botões agora ficam abaixo -->
+      <div class="carousel-buttons">
+        <button class="carousel-button prev" aria-label="Anterior">
+          &#10094;
+        </button>
+        <button class="carousel-button next" aria-label="Próximo">
+          &#10095;
+        </button>
+      </div>
 
-    <section id="equipe" class="team">
-      <div class="container">
-        <h2 class="section-title">Nosso Barbeiro</h2>
-        <div class="team-single">
-          <div class="team-card">
-            <img
-              src="img/david-andrade.jpeg"
-              alt="David Andrade"
-              loading="lazy"
-            />
-            <div class="team-info">
-              <h3>David Andrade</h3>
-              <p>Visagista & Barbeiro</p>
-              <div class="social-links">
-                <a
-                  href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="https://www.facebook.com/share/1AZRV6vWUb/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a
-                  href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-              </div>
+      <div class="carousel-indicators">
+        <!-- Os dots serão gerados via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <script src="carrossel.js"></script>
+
+  <section id="equipe" class="team">
+    <div class="container">
+      <h2 class="section-title">Nosso Barbeiro</h2>
+      <div class="team-single">
+        <div class="team-card">
+          <img src="img/david-andrade.jpeg" alt="David Andrade" loading="lazy" />
+          <div class="team-info">
+            <h3>David Andrade</h3>
+            <p>Visagista & Barbeiro</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw==" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/share/1AZRV6vWUb/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="agendamento" class="booking">
-      <div class="container">
-        <h2 class="section-title">Agendamento</h2>
-        <form id="booking-form">
-          <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-          <div class="form-group">
-            <label for="service">Serviço:</label>
-            <select id="service" name="service" required>
-              <option value="">Selecione um serviço</option>
-              <option value="Corte de Cabelo">Corte de Cabelo</option>
-              <option value="Barba">Barba</option>
-              <option value="Cabelo + Barba">Cabelo + Barba</option>
-              <option value="Acabamento">Acabamento</option>
-              <option value="Listra">Listra</option>
-              <option value="Pigmentação">Pigmentação</option>
-              <option value="Limpeza de pele">Limpeza de pele</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="barber">Barbeiro:</label>
-            <select id="barber" name="barber" required>
-              <option value="">Selecione um barbeiro</option>
-              <option value="David Andrade">David Andrade</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="date">Data:</label>
-            <input type="date" id="date" name="date" required />
-          </div>
-          <div class="form-group">
-            <label for="time">Horário:</label>
-            <input type="time" id="time" name="time" required />
-          </div>
-          <button type="submit" id="btnAgendar" class="btn pulse-animation">
+  <section id="agendamento" class="booking">
+    <div class="container">
+      <h2 class="section-title">Agendamento</h2>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required minlength="3" pattern="[A-Za-zÀ-ú ]+"
+            title="Por favor, insira um nome válido (somente letras)">
+          <span class="error-message" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefone: </label>
+          <input type="tel" id="phone" name="phone" required 
+                 title="Formato: (21) 99999-9999 ou 21 99999-9999">
+          <span class="error-message" id="phone-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="service">Serviço:</label>
+          <select id="service" name="service" required>
+            <option value="">Selecione um serviço</option>
+            <option value="Corte de Cabelo">Corte de Cabelo</option>
+            <option value="Barba">Barba</option>
+            <option value="Cabelo + Barba">Cabelo + Barba</option>
+            <option value="Acabamento">Acabamento</option>
+            <option value="Listra">Listra</option>
+            <option value="Pigmentação">Pigmentação</option>
+            <option value="Limpeza de pele">Limpeza de pele</option>
+          </select>
+          <span class="error-message" id="service-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="barber">Barbeiro:</label>
+          <select id="barber" name="barber" required>
+            <option value="">Selecione um barbeiro</option>
+            <option value="David Andrade">David Andrade</option>
+          </select>
+          <span class="error-message" id="barber-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="date">Data:</label>
+          <input type="date" id="date" name="date" required 
+                 min="<?php echo date('Y-m-d'); ?>"
+                 max="<?php echo date('Y-m-d', strtotime('+1 week')); ?>">
+          <span class="error-message" id="date-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Horário:</label>
+          <input type="time" id="time" name="time" required min="10:00" max="17:30">
+          <span class="error-message" id="time-error"></span>
+        </div>
+        <button type="submit" id="btnAgendar" class="btn pulse-animation">
             Agendar
           </button>
+      </form>
+    </div>
+    </form>
+    </div>
+  </section>
 
-          <script>
-            // Captura o clique no botão Agendar
-            document
-              .getElementById("btnAgendar")
-              .addEventListener("click", function (e) {
-                e.preventDefault();
-
-                // Obter os valores dos inputs do formulário
-                const nome =
-                  document.getElementById("name").value || "Não informado";
-                const telefone =
-                  document.getElementById("phone").value || "Não informado";
-                const servico =
-                  document.getElementById("service").value || "Não informado";
-                const barbeiro =
-                  document.getElementById("barber").value || "Não informado";
-                const data =
-                  document.getElementById("date").value || "Não informado";
-                const horario =
-                  document.getElementById("time").value || "Não informado";
-
-                const phone = "5521989698002"; // Seu número com DDI e DDD
-
-                // Mensagem formatada com os dados do usuário
-                const mensagem = `✅ NOVO AGENDAMENTO ✅
-
-          Olá ${barbeiro}, gostaria de agendar um horário na Modern Man Barber Shop.
-
-          *Cliente:* ${nome}
-          *Telefone:* ${telefone}
-
-          *Serviço:* ${servico}
-          *Barbeiro:* ${barbeiro}
-          *Data:* ${data}
-          *Horário:* ${horario}
-
-         *Por favor, confirme se este horário está disponível!*`;
-
-                console.log(mensagem);
-
-                window.open(
-                  `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
-                  "_blank"
-                );
-
-                // Opcional: resetar o formulário após o envio
-                document.getElementById("formAgendamento").reset();
-              });
-          </script>
-        </form>
-      </div>
-    </section>
-
-    <section id="contato" class="contact">
-      <div class="container">
-        <h2 class="section-title">Contato</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <h3>Informações</h3>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Rua Djalma Lemos, 503 cp -
-              João Caetano
-            </p>
-            <p><i class="fas fa-phone"></i> (21) 98969-8002</p>
-            <p><i class="fas fa-envelope"></i> contato@modernman.com</p>
-            <h3>Horário de Funcionamento</h3>
-            <p>Segunda a Sexta: 10:00 - 17:30</p>
-            <p>Sábado: 10:00 - 15:00</p>
-            <p>Domingo: Fechado</p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/share/1AZRV6vWUb/"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw=="
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
-                class="whatsapp-float"
-                target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-            </div>
-          </div>
-          <div class="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3679.964269381061!2d-42.9518626!3d-22.7295694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bdf986ebafa9%3A0xa4930362cd7ad50f!2sAuto%20Pe%C3%A7as%20Jerusalem!5e0!3m2!1spt-BR!2sbr!4v1745896644384!5m2!1spt-BR!2sbr"
-              width="800"
-              height="600"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <h2>Modern Man <span>Barber Shop</span></h2>
-            <p>Estilo que impressiona, atitude que transforma</p>
-          </div>
-          <div class="footer-links">
-            <h3>Links Rápidos</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#produtos">Produtos</a></li>
-              <li><a href="#equipe">Equipe</a></li>
-              <li><a href="#agendamento">Agendamento</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contato</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Informações</h3>
           <p>
-            &copy; 2025 Modern Man Barber Shop. Todos os direitos reservados.
+            <i class="fas fa-map-marker-alt"></i> Rua Djalma Lemos, 503 cp -
+            João Caetano
           </p>
+          <p><i class="fas fa-phone"></i> (21) 98969-8002</p>
+          <p><i class="fas fa-envelope"></i> contato@modernman.com</p>
+          <h3>Horário de Funcionamento</h3>
+          <p>Segunda a Sexta: 10:00 - 17:30</p>
+          <p>Sábado: 10:00 - 15:00</p>
+          <p>Domingo: Fechado</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1AZRV6vWUb/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw=="><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+              class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3679.964269381061!2d-42.9518626!3d-22.7295694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bdf986ebafa9%3A0xa4930362cd7ad50f!2sAuto%20Pe%C3%A7as%20Jerusalem!5e0!3m2!1spt-BR!2sbr!4v1745896644384!5m2!1spt-BR!2sbr"
+            width="800" height="600" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Modern Man <span>Barber Shop</span></h2>
+          <p>Estilo que impressiona, atitude que transforma</p>
+        </div>
+        <div class="footer-links">
+          <h3>Links Rápidos</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#agendamento">Agendamento</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Modern Man Barber Shop. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

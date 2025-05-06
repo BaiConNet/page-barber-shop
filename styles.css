@@ -770,6 +770,34 @@ footer {
   font-size: 0.9rem;
 }
 
+form[method="dialog"] {
+  /* Remove qualquer estilo padrão que possa interferir */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message:not(:empty) {
+  display: block;
+}
+
+input:invalid:not(:empty),
+select.option:invalid:not(:empty) {
+  border-color: #ff4444;
+}
+
+input:valid:not(:empty),
+select:valid:not(:empty) {
+  border-color: #00c851;
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
   section {
