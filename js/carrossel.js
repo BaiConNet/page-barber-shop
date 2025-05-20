@@ -5,37 +5,37 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       title: "Pomada Modeladora Infinity 80g",
       price: "R$ 20,00",
-      image: "img/pomada-infinity.png",
+      image: "img/products/pomada-infinity.png",
     },
     {
       id: 6,
       title: "Pasta Modeladora For Men 160g",
       price: "R$ 30,00",
-      image: "img/pomada-malb.png",
+      image: "img/products/pomada-malb.png",
     },
     {
       id: 2,
       title: "Shampoo Dom Pelo 250ml",
       price: "R$ 30,00",
-      image: "img/shampoo-dom-pelo.jpeg",
+      image: "img/products/shampoo-dom-pelo.jpeg",
     },
     {
       id: 3,
       title: "Gel Cola extra forte 300g",
       price: "R$ 22,00",
-      image: "img/gel-cola.jpeg",
+      image: "img/products/gel-cola.jpeg",
     },
     {
       id: 4,
       title: "Minoxidil Dom Pelo 120ml",
       price: "R$ 40,00",
-      image: "img/minoxidil.jpeg",
+      image: "img/products/minoxidil.jpeg",
     },
     {
       id: 5,
       title: "Balm Dulux 120g",
       price: "R$ 30,00",
-      image: "img/balm.jpeg",
+      image: "img/products/balm.jpeg",
     },
   ];
 
