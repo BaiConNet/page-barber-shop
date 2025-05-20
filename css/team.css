@@ -1,0 +1,87 @@
+/* Team Section */
+.team {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.team-single {
+  max-width: 400px;
+  margin: 40px auto 0;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-info {
+  padding: 25px;
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-info p {
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #555;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links .fa-instagram:hover {
+  color: #e1306c;
+}
+
+.social-links .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.social-links .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .team-card img {
+    height: 300px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+}
