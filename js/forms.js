@@ -135,7 +135,7 @@ document
           const barbeiro = document.getElementById("barber").value;
           const dataISO = document.getElementById("date").value;
           const horario = document.getElementById("time").value;
-          const phone = "5521989698002"; // Seu número com DDI e DDD
+          const phone = "5521967363659"; // Seu número com DDI e DDD
 
           function formatarData(dataISO) {
             const [ano, mes, dia] = dataISO.split("-");

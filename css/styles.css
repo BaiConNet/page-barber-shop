@@ -189,7 +189,7 @@ section {
   padding: 6px 14px;
   border: none;
   border-radius: 5px;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -382,6 +382,10 @@ nav ul li a:hover::after {
 }
 
 /* Services Section */
+
+.services {
+  background-color: #f9f9f9;
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -454,15 +458,15 @@ nav ul li a:hover::after {
 }
 
 .price {
-  font-size: 0.85rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
   white-space: nowrap;
 }
 
 /* Products Section */
-.products {
-  background-color: #f9f9f9;
+.product-carousel {
+  background: #f9f9f9;
 }
 
 .products-grid {
@@ -641,6 +645,10 @@ nav ul li a:hover::after {
 }
 
 /* Contact Section */
+
+.contact {
+  background-color: #f9f9f9;
+}
 .contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

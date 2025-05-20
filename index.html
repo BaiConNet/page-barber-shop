@@ -166,6 +166,23 @@
           <div class="service-card">
             <div class="service-icon">
               <img
+                src="./img/services/s-sobrancelha.jpg"
+                alt="Ícone de acabamento"
+                class="service-img"
+              />
+            </div>
+            <h3>Sobrancelha</h3>
+            <p>Moldar e definir</p>
+            <div class="card-footer">
+              <span class="price">R$ 20,00</span>
+              <a href="#agendamento" class="btn-small pulse-animation"
+                >AGENDAR</a
+              >
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
                 src="./img/services/s-colorir.jpg"
                 alt="Ícone de acabamento"
                 class="service-img"
@@ -201,123 +218,124 @@
       </div>
     </section>
 
-  <section id="produtos" class="product-carousel">
-    <h2 class="section-title">Nossos Produtos</h2>
-
-    <div class="carousel-container">
-      <div class="carousel-grid">
-        <!-- Produtos serão inseridos via JS -->
-      </div>
+    <section id="produtos" class="products product-carousel">
+      <h2 class="section-title">Nossos Produtos</h2>
 
       <div class="carousel-container">
-        <div class="carousel-grid"><!-- Produtos --></div>
-      </div>
+        <div class="carousel-grid">
+          <!-- Produtos serão inseridos via JS -->
+        </div>
 
-      <!-- Botões agora ficam abaixo -->
-      <div class="carousel-buttons">
-        <button class="carousel-button prev" aria-label="Anterior">
-          &#10094;
-        </button>
-        <button class="carousel-button next" aria-label="Próximo">
-          &#10095;
-        </button>
-      </div>
+        <div class="carousel-container">
+          <div class="carousel-grid"><!-- Produtos --></div>
+        </div>
 
-      <div class="carousel-indicators">
-        <!-- Os dots serão gerados via JavaScript -->
-      </div>
-    </div>
-  </section>
+        <!-- Botões agora ficam abaixo -->
+        <div class="carousel-buttons">
+          <button class="carousel-button prev" aria-label="Anterior">
+            &#10094;
+          </button>
+          <button class="carousel-button next" aria-label="Próximo">
+            &#10095;
+          </button>
+        </div>
 
-  <section id="equipe" class="team">
-    <div class="container">
-      <h2 class="section-title">Nosso Barbeiro</h2>
-      <div class="team-single">
-        <div class="team-card">
-          <img src="img/david-andrade.jpeg" alt="David Andrade" loading="lazy" />
-          <div class="team-info">
-            <h3>David Andrade</h3>
-            <p>Visagista & Barbeiro</p>
-            <div class="social-links">
-              <a href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw==" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/share/1AZRV6vWUb/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
-                target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i>
-              </a>
+        <div class="carousel-indicators">
+          <!-- Os dots serão gerados via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="team">
+      <div class="container">
+        <h2 class="section-title">Nosso Barbeiro</h2>
+        <div class="team-single">
+          <div class="team-card">
+            <img src="img/david-andrade.jpeg" alt="David Andrade" loading="lazy" />
+            <div class="team-info">
+              <h3>David Andrade</h3>
+              <p>Visagista & Barbeiro</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw==" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1AZRV6vWUb/" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/5521967363659?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+                  target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="agendamento" class="booking">
-    <div class="container">
-      <h2 class="section-title">Agendamento</h2>
+    <section id="agendamento" class="booking">
+      <div class="container">
+        <h2 class="section-title">Agendamento</h2>
 
-      <form id="booking-form">
-        <div class="form-group">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" required minlength="3" pattern="[A-Za-zÀ-ú ]+"
-            title="Por favor, insira um nome válido (somente letras)">
-          <span class="error-message" id="name-error"></span>
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefone: </label>
-          <input type="tel" id="phone" name="phone" required 
-                 title="Formato: (21) 99999-9999 ou 21 99999-9999">
-          <span class="error-message" id="phone-error"></span>
-        </div>
-        <div class="form-group">
-          <label for="service">Serviço:</label>
-          <select id="service" name="service" required>
-            <option value="">Selecione um serviço</option>
-            <option value="Corte de Cabelo">Corte de Cabelo</option>
-            <option value="Barba">Barba</option>
-            <option value="Cabelo + Barba">Cabelo + Barba</option>
-            <option value="Acabamento">Acabamento</option>
-            <option value="Listra">Listra</option>
-            <option value="Pigmentação">Pigmentação</option>
-            <option value="Limpeza de pele">Limpeza de pele</option>
-          </select>
-          <span class="error-message" id="service-error"></span>
-        </div>
-        <div class="form-group">
-          <label for="barber">Barbeiro:</label>
-          <select id="barber" name="barber" required>
-            <option value="">Selecione um barbeiro</option>
-            <option value="David Andrade">David Andrade</option>
-          </select>
-          <span class="error-message" id="barber-error"></span>
-        </div>
-        
-        <div class="form-group">
-          <label for="date">Data:</label>
-          <input type="date" id="date" name="date" required 
-                 min="<?php echo date('Y-m-d'); ?>"
-                 max="<?php echo date('Y-m-d', strtotime('+1 week')); ?>">
-          <span class="error-message" id="date-error"></span>
-        </div>
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required minlength="3" pattern="[A-Za-zÀ-ú ]+"
+              title="Por favor, insira um nome válido (somente letras)">
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone: </label>
+            <input type="tel" id="phone" name="phone" required 
+                  title="Formato: (21) 99999-9999 ou 21 99999-9999">
+            <span class="error-message" id="phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="service">Serviço:</label>
+            <select id="service" name="service" required>
+              <option value="">Selecione um serviço</option>
+              <option value="Corte de Cabelo">Corte de Cabelo</option>
+              <option value="Barba">Barba</option>
+              <option value="Cabelo + Barba">Cabelo + Barba</option>
+              <option value="Acabamento">Acabamento</option>
+              <option value="Listra">Listra</option>
+              <option value="Sobrancelha">Sobrancelha</option>
+              <option value="Pigmentação">Pigmentação</option>
+              <option value="Limpeza de pele">Limpeza de pele</option>
+            </select>
+            <span class="error-message" id="service-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="barber">Barbeiro:</label>
+            <select id="barber" name="barber" required>
+              <option value="">Selecione um barbeiro</option>
+              <option value="David Andrade">David Andrade</option>
+            </select>
+            <span class="error-message" id="barber-error"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required 
+                  min="<?php echo date('Y-m-d'); ?>"
+                  max="<?php echo date('Y-m-d', strtotime('+1 week')); ?>">
+            <span class="error-message" id="date-error"></span>
+          </div>
 
-        <div class="form-group">
-          <label for="time">Horário:</label>
-          <input type="time" id="time" name="time" required min="10:00" max="17:30">
-          <span class="error-message" id="time-error"></span>
-        </div>
-        <button type="submit" id="btnAgendar" class="btn pulse-animation">
-            Agendar
+          <div class="form-group">
+            <label for="time">Horário:</label>
+            <input type="time" id="time" name="time" required min="10:00" max="17:30">
+            <span class="error-message" id="time-error"></span>
+          </div>
+          <button type="submit" id="btnAgendar" class="btn pulse-animation">
+              Agendar
           </button>
+        </form>
+      </div>
       </form>
-    </div>
-    </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
   <section id="contato" class="contact">
     <div class="container">
@@ -339,7 +357,7 @@
             <a href="https://www.facebook.com/share/1AZRV6vWUb/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/david_andrade_silva_?igsh=MTJ3MGxydW5nb29xYw==" target="_blank" rel="noopener noreferrer"><i
                 class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5521989698002?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
+            <a href="https://wa.me/5521967363659?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20na%20Modern%20Man%20Barber%20Shop"
               class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -379,8 +397,8 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
-  <script src="js/carrossel.js"></script>
-  <script src="js/forms.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carrossel.js"></script>
+    <script src="js/forms.js"></script>
   </body>
 </html>
