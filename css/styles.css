@@ -453,7 +453,7 @@ select:valid:not(:empty) {
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: rgba(37, 211, 102);
+    background-color: #25d366;
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -464,13 +464,13 @@ select:valid:not(:empty) {
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
-    line-height: 0; /* Garante centralização perfeita */
     text-decoration: none;
   }
+  
 
   .whatsapp-float i {
-    margin: 0; /* Remove qualquer margem do ícone */
-    padding: 0; /* Remove qualquer padding do ícone */
+    margin: 0 !important;
+    padding: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -483,6 +483,16 @@ select:valid:not(:empty) {
     background-color: #128c7e;
     transform: scale(1.1) rotate(5deg);
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      bottom: 20px;
+      right: 20px;
+    }
   }
 
   /* Efeito de pulsação opcional */

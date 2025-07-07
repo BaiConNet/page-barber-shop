@@ -141,7 +141,6 @@ document
           }
           const dataFormatada = formatarData(dataISO);
 
-          // Esta linha deve vir ANTES de usar a variável
           // Mensagem formatada com os dados do usuário
           const mensagem = `NOVO AGENDAMENTO
             
@@ -157,12 +156,18 @@ Contato: ${telefone}
 
 *Por favor, confirme se este horário está disponível!*`;
 
-          window.open(
+            window.open(
             `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
             "_blank"
-          );
-          console.log(mensagem);
-        });
+            );
+            console.log(mensagem);
+            // Limpa o formulário após o envio
+            resetForm(document.getElementById("booking-form"));
+            // Recarrega a página após o envio
+            setTimeout(() => {
+            window.location.reload();
+            }, 500);
+          });
 
       function resetForm(formElement) {
         // Resetar os valores
