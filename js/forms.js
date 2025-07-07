@@ -90,19 +90,17 @@ document
     } else {
       const [hours, minutes] = horario.split(":").map(Number);
       const selectedDate = new Date(data);
-      const dayOfWeek = selectedDate.getDay(); // 0=Domingo, 6=Sábado
+      const dayOfWeek = selectedDate.getDay(); // 0=segunda, 6=domingo
 
       // Verifica se é domingo
-      if (dayOfWeek === 6) {
+      if (dayOfWeek === 6 && (hours > 12 || (hours === 12 && minutes > 0))) {
         document.getElementById("time-error").textContent =
-          "Não abrimos aos domingos";
+          "Aos domingos só atendemos até 12h";
         isValid = false;
       }
       // Verifica se é sábado após 15h
       else if (
-        dayOfWeek === 5 &&
-        (hours > 15 || (hours === 15 && minutes > 0))
-      ) {
+        dayOfWeek === 5 && (hours > 15 || (hours === 15 && minutes > 0))) {
         document.getElementById("time-error").textContent =
           "Aos sábados só atendemos até 15h";
         isValid = false;
@@ -113,10 +111,10 @@ document
           "Por favor, selecione um horário que termine em :00 ou :30";
         isValid = false;
       }
-      // Verifica o horário de funcionamento padrão (seg-sex 10h-17h30)
-      else if (hours < 10 || (hours === 17 && minutes > 30) || hours >= 18) {
+      // Verifica o horário de funcionamento padrão (seg-sex 08h-18h00)
+      else if (hours < 8 || (hours === 18 && minutes > 0) || hours >= 19) {
         document.getElementById("time-error").textContent =
-          "Horário fora do funcionamento (10:00 - 17:30)";
+          "Horário fora do funcionamento (08:00 - 18:00)";
         isValid = false;
       }
     }
