@@ -93,16 +93,15 @@ document
       const dayOfWeek = selectedDate.getDay(); // 0=segunda, 6=domingo
 
       // Verifica se é domingo
-      if (dayOfWeek === 6 && (hours > 12 || (hours === 12 && minutes > 0))) {
+      if (dayOfWeek === 6 && (hours > 11 || (hours === 11 && minutes >= 30))) {
         document.getElementById("time-error").textContent =
-          "Aos domingos só atendemos até 12h";
+          "Aos domingos atendemos de 08h até 11h30";
         isValid = false;
       }
-      // Verifica se é sábado após 15h
-      else if (
-        dayOfWeek === 5 && (hours > 15 || (hours === 15 && minutes > 0))) {
+      // Verifica se é sábado após 17h30
+      else if (dayOfWeek === 5 && hours === 17 && minutes > 31) {
         document.getElementById("time-error").textContent =
-          "Aos sábados só atendemos até 15h";
+          "Aos sábados atendemos de 08h até 18:00h";
         isValid = false;
       }
       // Verifica se o horário termina em 00 ou 30
@@ -111,10 +110,10 @@ document
           "Por favor, selecione um horário que termine em :00 ou :30";
         isValid = false;
       }
-      // Verifica o horário de funcionamento padrão (seg-sex 08h-18h00)
+      // Verifica o horário de funcionamento padrão (seg-sáb 08h-18h00)
       else if (hours < 8 || (hours === 18 && minutes > 0) || hours >= 19) {
         document.getElementById("time-error").textContent =
-          "Horário fora do funcionamento (08:00 - 18:00)";
+          "Horário fora do funcionamento de 08h até 18h00";
         isValid = false;
       }
     }
@@ -156,18 +155,18 @@ Contato: ${telefone}
 
 *Por favor, confirme se este horário está disponível!*`;
 
-            window.open(
+          window.open(
             `https://wa.me/${phone}?text=${encodeURIComponent(mensagem)}`,
             "_blank"
-            );
-            console.log(mensagem);
-            // Limpa o formulário após o envio
-            resetForm(document.getElementById("booking-form"));
-            // Recarrega a página após o envio
-            setTimeout(() => {
+          );
+          console.log(mensagem);
+          // Limpa o formulário após o envio
+          resetForm(document.getElementById("booking-form"));
+          // Recarrega a página após o envio
+          setTimeout(() => {
             window.location.reload();
-            }, 500);
-          });
+          }, 500);
+        });
 
       function resetForm(formElement) {
         // Resetar os valores
